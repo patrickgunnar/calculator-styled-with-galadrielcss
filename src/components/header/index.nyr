@@ -1,0 +1,45 @@
+Construct Module("headerComponent") {
+    Declare Class("headerContainer") Deriving("flexCenterBox") {
+        Stylesheet({
+            gap: "40px",
+            flexDir: "column",
+            p: "30px",
+            hr: "auto",
+            wd: "100%",
+            pos: "relative",
+            overflow: "hidden",
+            userSelect: "none"
+        })
+    },
+    Declare Class("h3") {
+        Stylesheet({
+            left: "-100px",
+            bottom: "-40px",
+            pos: "relative"
+        })
+    },
+    Declare Class("logoContainer") Deriving("flexCenterBox") {
+        Stylesheet({
+            cursor: "pointer",
+            txtFont: "'DrunkenHour'",
+            bold: "normal",
+            txtShadow: "0 0 0",
+            txtSize: "30px",
+            textDecoration: "none",
+            color: "white",
+            transition: "font-size 2s ease"
+        }),
+    },
+    Declare Class("logoImage") {
+        Important(true),
+        Stylesheet({
+            filter: "drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.2))",
+            left: "10px",
+            marginRight: "5px",
+            pos: "relative",
+            hr: "70px",
+            wd: "70px",
+            transition: "width 2s ease, height 2s ease, left 2s ease"
+        }),
+    },
+}

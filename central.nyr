@@ -1,0 +1,90 @@
+Construct Central {
+    Declare Imports([
+        Import("https://fonts.googleapis.com/css?family=Poppins")
+    ]),
+    Declare Typefaces({
+        DrunkenHour: "/fonts/drunken hour/DrunkenHour.otf"
+    }),
+    Declare Variables({
+        bgdColor: "hsl(211, 49%, 65%)",
+    }),
+    Declare Aliases({
+        bgd: background,
+        bgdImage: backgroundImage,
+        bgdColor: backgroundColor,
+        bgdPos: backgroundPosition,
+        bgdRpt: backgroundRepeat,
+        bgdSize: backgroundSize,
+        txtFont: fontFamily,
+        txtSize: fontSize,
+        bold: fontWeight,
+        txtShadow: textShadow,
+        pos: position,
+        hr: height,
+        minHr: minHeight,
+        wd: width,
+        p: padding,
+        br: borderRadius,
+        flexDir: flexDirection,
+        align: alignItems,
+        justify: justifyContent,
+        shadow: boxShadow,
+        m: margin,
+        z: zIndex,
+    }),
+    Declare Class("borderBox") {
+        Stylesheet({
+            boxSizing: "border-box",
+        })
+    },
+    Declare Class("flexCenterBox") Deriving("borderBox") {
+        Stylesheet({
+            display: "flex",
+            align: "center",
+            justify: "center",
+        })
+    },
+    Declare Class("body") Deriving("flexCenterBox") {
+        Stylesheet({
+            bgdColor: "${bgdColor}",
+            flexDir: "column",
+            color: "white",
+            overflowX: "hidden",
+            overflowY: "auto",
+            txtFont: "'Poppins', 'Arial'",
+            bold: "700",
+            minHr: "100vh",
+            wd: "100vw",
+            pos: "relative"
+        })
+    },
+    Declare Class("unstyledLink") {
+        Stylesheet({
+            textDecoration: "none",
+            color: "inherit",
+            background: "none",
+            border: "none",
+            outline: "none",
+        }),
+        Hover({
+            textDecoration: "none",
+            color: "inherit",
+            outline: "none",
+        }),
+        Active({
+            textDecoration: "none",
+            color: "inherit",
+            outline: "none",
+        }),
+        Visited({
+            textDecoration: "none",
+            color: "inherit",
+            outline: "none",
+        }),
+        Focus({
+            textDecoration: "none",
+            color: "inherit",
+            outline: "none",
+        })
+    },
+}

@@ -1,0 +1,120 @@
+Construct Module("pageComponent") {
+    Declare Variables({
+        veryLightGray: "hsl(0, 0%, 91%)",
+        lightGray: "hsl(224, 12%, 76%)",
+        darkGray: "hsl(212, 15%, 22%)",
+        lightBlue: "hsl(211, 60%, 76%)",
+        darkBlue: "hsl(211, 60%, 66%)",
+        lightPink: "hsl(27, 98%, 82%)",
+        darkPink: "hsl(27, 98%, 72%)",
+    }),
+    Declare Class("calculator") {
+        Stylesheet({
+            bgdColor: "${veryLightGray}",
+            br: "1rem",
+            display: "flex",
+            flexWrap: "wrap",
+            justify: "center",
+            shadow: "0 0 20px rgba(0, 0, 0, 0.25)",
+            m: "6rem 0",
+            marginBottom: "2rem",
+            hr: "33rem",
+            wd: "22rem"
+        })
+    },
+    Declare Class("screenContainer") Deriving("flexCenterBox") {
+        Stylesheet({
+            bgdColor: "${veryLightGray}",
+            br: "0.5rem",
+            shadow: "6px 6px 12px #cfcfce, -6px -6px 12px #ffffff",
+            m: "2rem 0 1rem 0",
+            hr: "5rem",
+            wd: "18rem",
+        })
+    },
+    Declare Class("screen") {
+        Stylesheet({
+            bgdColor: "${lightGray}",
+            br: "0.25rem",
+            shadow: "inset 7px 7px 15px #9fa2ac, inset -7px -7px 15px #d7dce8",
+            hr: "4rem",
+            wd: "17rem",
+        })
+    },
+    Declare Class("screenBase") {
+        Stylesheet({
+            bgdColor: "transparent",
+            border: "none",
+            outline: "none",
+            boxSizing: "border-box",
+            color: "${darkGray}",
+            textAlign: "right",
+            bold: "inherit",
+            m: "0",
+            p: "0",
+            wd: "100%",
+        })
+    },
+    Declare Class("history") Deriving("screenBase") {
+        Stylesheet({
+            txtSize: "1rem",
+            p: "4px 7px 0 0",
+            opacity: "0.5",
+            hr: "30%",
+        })
+    },
+    Declare Class("result") Deriving("screenBase") {
+        Stylesheet({
+            txtSize: "2rem",
+            paddingRight: "7px",
+            hr: "70%",
+        })
+    },
+    Declare Class("btnContainer") Deriving("flexCenterBox") {
+        Stylesheet({
+            gap: "1rem",
+            flexWrap: "wrap",
+            hr: "22rem",
+            wd: "20rem",
+        })
+    },
+    Declare Class("btn") {
+        Stylesheet({
+            bgdColor: "${veryLightGray}",
+            br: "50%",
+            border: "none",
+            shadow: "5px 5px 10px #cfcfce, -5px -5px 10px #ffffff",
+            cursor: "pointer",
+            color: "${darkGray}",
+            txtSize: "1.3rem",
+            bold: "inherit",
+            hr: "3.5rem",
+            wd: "3.5rem",
+        }),
+        Hover({
+            bgdColor: "${lightGray}",
+        })
+    },
+    Declare Class("lightBlue") {
+        Stylesheet({
+            bgdColor: "${lightBlue}",
+        }),
+        Hover({
+            bgdColor: "${darkBlue}",
+        })
+    },
+    Declare Class("lightPink") {
+        Stylesheet({
+            bgdColor: "${lightPink}",
+        }),
+        Hover({
+            bgdColor: "${darkPink}",
+        })
+    },
+    Declare Class("equalsBtn") Deriving("lightPink") {
+        Stylesheet({
+            br: "4rem",
+            wd: "8rem",
+        })
+    }
+}

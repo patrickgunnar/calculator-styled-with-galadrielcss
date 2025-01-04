@@ -1,0 +1,15 @@
+Construct Module("socialMediaComponent") {
+    Declare Class("sectionContainer") Deriving("borderBox") {
+        Stylesheet({
+            display: "block",
+            wd: "100%",
+            userSelect: "none"
+        }),
+    },
+    Declare Class("socialButtonsContainer") Deriving("flexCenterBox") {
+        Stylesheet({
+            gap: "13px",
+            txtSize: "22px",
+        })
+    },
+}
